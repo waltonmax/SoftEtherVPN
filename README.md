@@ -1,3 +1,19 @@
+# 使用
+```dockerfile
+docker pull waltonmax/softether
+
+docker run -d \
+    -p 500:500/udp \
+    -p 4500:4500/udp \
+    -p 1701:1701/tcp \
+    -p 1194:1194/udp \
+    -e SPW=123456 \    #管理端密码
+    -e PSK=123456 \    #共享密钥
+    -e USERNAME=luke \ #用户
+    -e PASSWORD=luke \ #用户密码
+    waltonmax/softether
+```
+
 # A simple<sup>*</sup> [SoftEther VPN][1] server Docker image
 
 ![](https://github.com/siomiz/SoftEtherVPN/workflows/Docker%20Image%20CI/badge.svg)
